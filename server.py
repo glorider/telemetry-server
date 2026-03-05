@@ -1,9 +1,6 @@
 from fastapi import FastAPI, Request
-<<<<<<< HEAD
-=======
 import psycopg2
 import os
->>>>>>> a1dcf0c (up)
 
 app = FastAPI()
 
@@ -31,13 +28,6 @@ conn.commit()
 def home():
     return {"status": "running"}
 
-<<<<<<< HEAD
-@app.post("/collect")
-async def collect(request: Request):
-    data = await request.json()
-    print(data)
-    return {"status": "received"}
-=======
 
 @app.post("/collect")
 async def collect(request: Request):
@@ -56,4 +46,3 @@ async def collect(request: Request):
     conn.commit()
 
     return {"status": "saved"}
->>>>>>> a1dcf0c (up)
